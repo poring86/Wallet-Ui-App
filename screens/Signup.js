@@ -330,7 +330,7 @@ const SignUp = ({navigation}) => {
             behavior={Platform.OS === 'ios'? "padding": null}
             style={{flex: 1}}
         >
-            <StatusBar translucent={true} backgroundColor={'transparent'}/>
+            <StatusBar translucent backgroundColor="transparent" barStyle="dark-content" />
 
             <LinearGradient
                 colors={[COLORS.lime, COLORS.emerald]}

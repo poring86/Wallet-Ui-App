@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
 
@@ -17,17 +18,19 @@ const Stack = createStackNavigator()
 
 const App = () => {
     return (
-        <NavigationContainer theme={theme}>
-            <Stack.Navigator
-                screenOptions={{
-                    headerShown: false
-                }}
-                initialRouteName={'SignUp'}
-            >
-                <Stack.Screen name="SignUp" component={SignUp} />
-                <Stack.Screen name="Home" component={Tabs} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <>
+            <NavigationContainer theme={theme}>
+                <Stack.Navigator
+                    screenOptions={{
+                        headerShown: false
+                    }}
+                    initialRouteName={'SignUp'}
+                >
+                    <Stack.Screen name="SignUp" component={SignUp} />
+                    <Stack.Screen name="Home" component={Tabs} />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </>
     )
 }
 
